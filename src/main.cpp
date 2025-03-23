@@ -1,10 +1,10 @@
-#include <Arduino.h>
+#include <iostream>
 #include "Config.h"
 
 void setup() {
-// write your initialization code here
+    std::cout << "Pompeii - 2026 - RCJS 2v2" << std::endl;
 }
 
 void loop() {
-// write your code here
+
 }
