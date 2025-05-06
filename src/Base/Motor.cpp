@@ -14,8 +14,6 @@ Motor::Motor(int pin, int dir, int ena) {
     pwmHandler = PWMHandler(pin);
 }
 
-Motor::Motor() = default;
-
 void Motor::speed(int speed) const {
     digitalWrite(_dir, speed > 0 ? HIGH : LOW);
     speed = std::clamp(speed, -100, 100);
