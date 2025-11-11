@@ -1,11 +1,12 @@
 #include <memory>
 #include "bohlebots.h"
-#include "../include/util/debug.h"
+#include "../include/util/log.h"
 
-auto bot = std::make_unique<BohleBots>();
+std::unique_ptr<BohleBots> bot;
 
 void setup() {
-    Debug::header();
+    Log::header();
+    Log::info("Setup complete");
 }
 
 void loop() {
