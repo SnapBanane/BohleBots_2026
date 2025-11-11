@@ -1,10 +1,13 @@
-#include <iostream>
-#include "Config.h"
+#include <memory>
+#include "bohlebots.h"
+#include "../include/util/debug.h"
+
+auto bot = std::make_unique<BohleBots>();
 
 void setup() {
-    std::cout << "Pompeii - 2026 - RCJS 2v2" << std::endl;
+    Debug::header();
 }
 
 void loop() {
-    delay(10);
+    bot->update();
 }
